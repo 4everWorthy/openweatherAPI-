@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="weather-card">
+            <h3>Weather App</h3>
+            <section>
+                <input type="text" id="zip-input" placeholder="Enter ZIP code">
+                <button id="zip-input-btn" onclick="weatherFn($('#zip-input').val())">Get Weather</button>
+            </section>
+            <div id="weather-info" class="animate__animated animate__fadeIn">
+                <img id="weather-icon" src="" alt="Weather Icon">
+                <div class="weather-main">
+                    <p id="temperature"></p>
+                    <p id="description"></p>
+                    <p id="location"></p>
+                </div>
+                <div class="weather-details">
+                    <p id="feels-like"></p>
+                    <p id="humidity"></p>
+                    <p id="temp-high-low"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
